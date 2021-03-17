@@ -47,9 +47,6 @@ Y_test = model.predict(X, batch_size=32)
 Y_res = y_scaler.inverse_transform(Y)
 Y_test_res = y_scaler.inverse_transform(Y_test)
 
-print(Y_res[0:10])
-print(Y_test_res[0:10])
-
 pl.subplot(211)
 pl.plot(Y_res, label='ann')
 pl.plot(Y_test_res, label='train')
