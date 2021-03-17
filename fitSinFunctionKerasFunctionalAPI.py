@@ -1,3 +1,6 @@
+# :NOTE: 18-Mar-2021
+# This CUDA loading wouldn't be necessary for a clean install of cuda and is only windows specific.
+# For linux this section will need to be removed.
 import ctypes
 
 cuda_path = "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v11.0\\bin\\"
@@ -11,6 +14,8 @@ to_load = ["cudart64_110.dll",
 
 for dll in to_load:
     ctypes.WinDLL(cuda_path + dll)
+
+# end-windows-specific-section.
 
 import numpy as np
 import matplotlib.pylab as pl
